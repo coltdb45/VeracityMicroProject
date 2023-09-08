@@ -14,9 +14,9 @@ ax.set_rticks([])
 
 
 
-angle =  float(input("TFOM - "))
+tfom =  input("TFOM - ")
 
-angle = (-19.286 * angle ) + 244.292
+angle = (-19.286 * float(tfom) ) + 244.292
 
 
 angle = angle * (np.pi / 180)
@@ -24,6 +24,8 @@ angle = angle * (np.pi / 180)
 
 ax.bar(x=[-0.78,0.156,1.092,2.028,2.964], width=0.936, height = 1.25, bottom = 2.2, color = colorslist, align = "edge")
 ax.vlines(angle,0,2) # Angle, Starting Point, Radius
+ax.annotate(tfom,xy = (0,0), xytext = (0,0)) 
+
 
 plt.axis('off')
 plt.grid(False)
